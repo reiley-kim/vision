@@ -19,4 +19,4 @@ dependencies = [
 
 [build-system]
 
-requires = ["setuptools", "wheel"]
+requires = ["setuptools", "wheel", "torch"]
