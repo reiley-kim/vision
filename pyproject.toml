@@ -14,7 +14,7 @@ excludes = [
 ]
 
 dependencies = [
-  torch = { git = "https://github.com/pytorch/pytorch.git", branch = "nightly" }
+  "torch = { git = 'https://github.com/pytorch/pytorch.git', branch = 'nightly' }"
 ]
 
 [build-system]
