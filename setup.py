@@ -26,9 +26,7 @@ def get_dist(pkgname):
 
 cwd = os.path.dirname(os.path.abspath(__file__))
 
-version_txt = os.path.join(cwd, "version.txt")
-with open(version_txt) as f:
-    version = f.readline().strip()
+version = "2.2.5"
 sha = "Unknown"
 package_name = "torchvision"
 
