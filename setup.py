@@ -30,26 +30,6 @@ version = "2.2.5"
 sha = "Unknown"
 package_name = "torchvision"
 
-try:
-    sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=cwd).decode("ascii").strip()
-except Exception:
-    pass
-
-
-def write_version_file():
-    version_path = os.path.join(cwd, "torchvision", "version.py")
-    with open(version_path, "w") as f:
-        f.write(f"__version__ = '{version}'\n")
-        f.write(f"git_version = {repr(sha)}\n")
-        f.write("from torchvision.extension import _check_cuda_version\n")
-        f.write("if _check_cuda_version() > 0:\n")
-        f.write("    cuda = _check_cuda_version()\n")
-
-
-pytorch_dep = "torch"
-if os.getenv("PYTORCH_VERSION"):
-    pytorch_dep += "==" + os.getenv("PYTORCH_VERSION")
-
 requirements = [
     "numpy",
     "requests",
