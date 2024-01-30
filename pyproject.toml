@@ -14,7 +14,7 @@ excludes = [
 ]
 
 dependencies = [
-  "pytorch@git+https://github.com/pytorch/pytorch.git#egg=nightly",
+  "torch@git+https://github.com/pytorch/pytorch.git#egg=nightly",
 ]
 
 [build-system]
