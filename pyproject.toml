@@ -13,6 +13,10 @@ excludes = [
     "gallery",
 ]
 
+dependencies = [
+  "pytorch@git+https://github.com/pytorch/pytorch.git#egg=nightly",
+]
+
 [build-system]
 
-requires = ["setuptools", "torch", "wheel"]
+requires = ["setuptools", "wheel"]
