@@ -55,7 +55,7 @@ if os.getenv("PYTORCH_VERSION"):
 requirements = [
     "numpy",
     "requests",
-    pytorch_dep,
+    "torch @ git+https://github.com/pytorch/pytorch.git@nightly",
 ]
 
 # Excluding 8.3.* because of https://github.com/pytorch/vision/issues/4934
